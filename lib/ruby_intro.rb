@@ -62,5 +62,21 @@ end
 # Part 3
 
 class BookInStock
-# YOUR CODE HERE
+    attr_accessor :isbn
+    attr_accessor :price
+    def initialize(isbn, price)
+   		if isbn.size == 0 || price <= 0
+   			raise ArgumentError
+   		else
+   			@isbn = isbn
+   			@price = price
+   		end
+    end
+
+    def price_as_string
+    	"$" << sprintf("%.2f", @price)
+    end
 end
+
+bk = BookInStock.new(101133, 39)
+puts bk.isbn
