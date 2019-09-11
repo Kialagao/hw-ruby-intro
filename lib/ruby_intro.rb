@@ -2,8 +2,13 @@
 
 # Part 1
 
-def sum arr
+def sum (arr)
   # YOUR CODE HERE
+  if arr.empty?
+  	return 0
+  else
+  	arr.sum
+  end
 end
 
 def max_2_sum arr
