@@ -51,8 +51,12 @@ def starts_with_consonant?(s)
   return !(upper.include?(s[0].to_s) || lower.include?(s[0].to_s))
 end
 
-def binary_multiple_of_4? s
-  # YOUR CODE HERE
+def binary_multiple_of_4?(s)
+  if s.size == 0 || ((s.count('0')) + (s.count('1')) != s.size) || (s.to_i(2) % 4  != 0)
+  	return false
+  else
+  	true
+  end
 end
 
 # Part 3
